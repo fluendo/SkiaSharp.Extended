@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace SkiaSharp.Helpers
+namespace SkiaSharp
 {
 	internal static class CssHelper
 	{
