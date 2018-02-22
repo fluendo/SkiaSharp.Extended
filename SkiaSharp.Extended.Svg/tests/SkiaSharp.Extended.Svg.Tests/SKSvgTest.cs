@@ -324,6 +324,18 @@ namespace SkiaSharp.Extended.Svg.Tests
 			Assert.AreEqual(SKColors.Black, bmp.GetPixel(50, 50));
 		}
 
+		[Test]
+		public void SvgFillsAreCorrect()
+		{
+			var path = Path.Combine(PathToImages, "issues-24.svg");
+
+			var svg = new SKSvg();
+			svg.Load(path);
+			var bmp = CreateBitmap(svg, SKColors.White);
+
+			Assert.AreEqual(SKColors.White, bmp.GetPixel(11, 20));
+		}
+
 		private static SKBitmap LoadSvgBitmap(string svgPath, SKColor? background = null)
 		{
 			// open the SVG
